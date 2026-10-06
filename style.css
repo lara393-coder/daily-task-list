@@ -16,23 +16,23 @@ body {
   background-color: var(--bg-main);
   transition: background-color 0.3s ease;
   display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center;    
-  min-height: 100vh;           
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
   padding-top: 40px;
   font-family: sans-serif;
   font-style: italic;
   box-sizing: border-box;
-} 
+}
 
 h1 {
   font-size: 40px;
   color: var(--primary-blue);
   margin-bottom: 5px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-} 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
 h2 {
   font-size: 20px;
@@ -44,14 +44,15 @@ h2 {
 .inputContainer {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
   width: 90%;
   max-width: 700px;
   margin-bottom: 25px;
   box-sizing: border-box;
 }
 
-.inputContainer input[type="text"], #textInput {
+.inputContainer input[type="text"],
+#textInput {
   flex: 1;
   padding: 12px 16px;
   border: 1px solid #d1d5db;
@@ -61,7 +62,8 @@ h2 {
   width: auto;
 }
 
-.inputContainer select, #typeSelect {
+.inputContainer select,
+#typeSelect {
   padding: 12px 16px;
   border-radius: 8px;
   border: none;
@@ -71,7 +73,8 @@ h2 {
   cursor: pointer;
 }
 
-.inputContainer button, #addButton {
+.inputContainer button,
+#addButton {
   padding: 12px 20px;
   border-radius: 8px;
   border: none;
@@ -99,10 +102,10 @@ h2 {
   padding: 20px;
   border-radius: 12px;
   flex: 1;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   min-height: 200px;
-  max-height: 280px;  
-  overflow-y: auto;       
+  max-height: 280px;
+  overflow-y: auto;
   padding-right: 5px;
 }
 
@@ -156,6 +159,45 @@ li {
   background-color: white;
   cursor: pointer;
   font-size: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+/* 📱 التكيف مع شاشات الموبايل */
+@media (max-width: 600px) {
+  body {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+
+  .inputContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputContainer input[type="text"],
+  .inputContainer select,
+  .inputContainer button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .listsWrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .listContainer {
+    max-height: 220px;
+  }
 }
