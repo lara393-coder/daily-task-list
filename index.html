@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Task List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button id="themeToggleBtn">pink mode🎀</button>
+  <h1>DAILY TASK LIST</h1>
+  <h2>Interactive Shopping</h2>
+  <div class="inputContainer">
+    <input type="text" placeholder="Add new item or task..." id="textInput">
+    <select id="typeSelect">
+      <option value="task">Task</option>
+      <option value="forShopping">For Shopping</option>
+    </select>
+    <button id="addButton">+ Add(+)</button>
+  </div>
+  
+  <div class = "listsWrapper">
+
+    <div class="listContainer">
+    <h3>TASKS</h3>
+    <ul id="tasksList">
+      
+    </ul>
+    </div>
+
+    <div class="listContainer">
+      <h3>SHOPPING LIST</h3>
+      <ul id="shoppingList">
+
+      </ul>
+    </div>
+
+  </div>
+  
+  <P id="counter">
+    <span id="tasksLeft">0</span> Tasks Left | <span id="itemToBuy">0</span> Items to but
+  </P>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

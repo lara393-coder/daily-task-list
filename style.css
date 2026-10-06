@@ -1,0 +1,161 @@
+:root {
+  --bg-main: #d1f4fa;
+  --primary-blue: #3b82f6;
+  --dark-blue: #1e3a8a;
+  --hover-blue: #1d4ed8;
+}
+
+body.pink-mode {
+  --bg-main: #fce7f3;
+  --primary-blue: #ec4899;
+  --dark-blue: #831843;
+  --hover-blue: #be185d;
+}
+
+body {
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;    
+  min-height: 100vh;           
+  margin: 0;
+  padding-top: 40px;
+  font-family: sans-serif;
+  font-style: italic;
+  box-sizing: border-box;
+} 
+
+h1 {
+  font-size: 40px;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+} 
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+  width: 90%;
+  max-width: 700px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.inputContainer input[type="text"], #textInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  width: auto;
+}
+
+.inputContainer select, #typeSelect {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-blue);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.inputContainer button, #addButton {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--dark-blue);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#addButton:hover {
+  background-color: var(--hover-blue);
+}
+
+.listsWrapper {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 700px;
+}
+
+.listContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  min-height: 200px;
+  max-height: 280px;  
+  overflow-y: auto;       
+  padding-right: 5px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f9fafb;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#counter {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #374151;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+#themeToggleBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
