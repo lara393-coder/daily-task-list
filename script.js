@@ -28,7 +28,11 @@ function renderItems() {
   
   allItems.forEach((item, index) => {
     let li = document.createElement("li");
-    li.innerHTML = `<input type="checkbox" ${item.completed ? "checked" : ""}> <span class="task-text" style="${item.completed ? 'text-decoration: line-through; color: #888;' : ''}">${item.text}</span> <button class="deleteBtn">🗑️</button>`;
+    li.innerHTML = `
+      <input type="checkbox" class="checkbox-item" ${item.completed ? "checked disabled" : ""}> 
+      <span class="task-text" style="${item.completed ? 'text-decoration: line-through; color: #888;' : ''}">${item.text}</span> 
+      <button class="deleteBtn">🗑️</button>
+    `;
 
     let deleteBtn = li.querySelector(".deleteBtn");
     deleteBtn.addEventListener("click", () => {
