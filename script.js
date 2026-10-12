@@ -97,13 +97,21 @@ textInput.addEventListener("keydown", (event) => {
 
 let themeToggleBtn = document.getElementById('themeToggleBtn');
 
+let savedTheme = localStorage.getItem("myAppTheme");
+if (savedTheme === "pink") {
+  document.body.classList.add('pink-mode');
+  themeToggleBtn.innerText = "blue mode💙";
+}
+
 themeToggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('pink-mode');
   
   if (document.body.classList.contains('pink-mode')) {
     themeToggleBtn.innerText = "blue mode💙";
+    localStorage.setItem("myAppTheme", "pink");
   } else {
     themeToggleBtn.innerText = "pink mode🎀";
+    localStorage.setItem("myAppTheme", "blue");
   }
 });
 
